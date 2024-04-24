@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "919799007930",
+    "project_id": "futsalin01",
+    "storage_bucket": "futsalin01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919799007930:android:814ba3783ce01d7c64d083",
+        "android_client_info": {
+          "package_name": "com.example.futsalin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxxFAAhP506mo-cZQnrsgdwwWeXCFAXy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDF4FF"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/text_field_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="18dp"
+        android:text="Super Futsal"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#2FC3FF"/>
+
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_field_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:text="Pilih Tanggal"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="395dp"
+        android:layout_height="137dp"
+        android:layout_below="@id/text_date"
+        android:layout_centerHorizontal="true"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+
+    <TextView
+        android:id="@+id/text_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datePicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Pilih Jam Mulai"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_start_time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:entries="@array/start_time_options" />
+
+    <TextView
+        android:id="@+id/text_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_start_time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="Pilih Durasi"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_duration"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_1_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="1 Jam"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radio_2_hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 Jam"
+            android:textSize="16sp" />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/text_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="620dp"
+        android:text="Total Harga: Rp. 0"
+        android:textColor="#2FC3FF"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="715dp"
+        android:backgroundTint="#2FC3FF"
+        android:text="Lanjutkan"
+        android:textColor="#EDF4FF"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Kembali"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#2FC3FF"
+        android:textColor="#EDF4FF"
+        android:layout_below="@+id/button_order"/>
+
+</RelativeLayout>
+
+
+

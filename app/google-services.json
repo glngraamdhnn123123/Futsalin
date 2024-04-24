@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "517807121955",
+    "project_id": "login-register-firebase-f5017",
+    "storage_bucket": "login-register-firebase-f5017.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517807121955:android:be88a2e7606b624440b396",
+        "android_client_info": {
+          "package_name": "com.example.futsalin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNoC1Gs8yOT51u5P_95MpbBOgso2gEnjU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

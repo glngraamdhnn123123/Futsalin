@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Futsalin</string>
+    <string name="masuk">MASUK</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="daftar_sekarang">DAFTAR SEKARANG</string>
+    <string name="username">Username</string>
+    <string name="konfirmasi_password">Konfirmasi Password</string>
+    <string name="belum_memiliki_akun">Belum memiliki akun?</string>
+    <string name="daftar">Daftar</string>
+    <string name="daftar1">DAFTAR</string>
+    <string name="sudah_memiliki_akun">Sudah memiliki akun?</string>
+    <string name="masuk2">Masuk</string>
+    <string name="keluar">KELUAR</string>
+    <string name="keluar1">Keluar</string>
+    <string name="email1">Email</string>
+    <string name="password123">Password</string>
+    <string name="email123">Email</string>
+</resources>

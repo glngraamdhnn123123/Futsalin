@@ -15,36 +15,45 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="336dp"
         android:background="@color/white">
+
         <TextView
             android:id="@+id/namaLap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="120dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="111dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="111dp"
+            android:layout_marginBottom="21dp"
             android:hint="Nama Lapangan"
             android:padding="0dp"
             android:paddingTop="0dp"
             android:paddingBottom="0dp"
             android:textColor="#000000"
             android:textColorHint="@color/black"
-            android:textSize="14sp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/gambarLap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/gambarLap"
-            android:layout_width="80dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="16dp"
+            android:layout_width="360dp"
+            android:layout_height="214dp"
+            android:layout_marginBottom="76dp"
             android:background="@drawable/bg_grid"
             android:outlineAmbientShadowColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/hargaLap"
@@ -52,8 +61,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="315dp"
             android:hint="Harga"
             android:padding="0dp"
             android:paddingStart="0dp"
@@ -62,11 +72,12 @@
             android:paddingBottom="0dp"
             android:textColor="#000000"
             android:textColorHint="@color/black"
-            android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/alamatLap"
-            app:layout_constraintTop_toBottomOf="@+id/alamatLap"
-            app:layout_constraintVertical_bias="1.0" />
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alamatLap" />
 
         <TextView
             android:id="@+id/alamatLap"
@@ -74,16 +85,20 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="278dp"
             android:hint="Alamat Lapangan"
             android:padding="0dp"
             android:paddingTop="0dp"
             android:paddingBottom="0dp"
             android:textColor="#000000"
             android:textColorHint="@color/black"
-            android:textSize="10sp"
-            app:layout_constraintStart_toEndOf="@+id/gambarLap"
-            app:layout_constraintTop_toBottomOf="@+id/namaLap" />
+            android:textSize="12sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.625"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gambarLap" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

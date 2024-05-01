@@ -22,7 +22,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         this.context = context;
         this.list = list;
     }
-
     @NonNull
     @Override
     public Adapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -45,7 +44,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView namaLapangan, alamatLapangan, hargaLapangan;
+        TextView namaLapangan, alamatLapangan, hargaLapangan, gambarlapangan;
         ImageView gambarLapangan;
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
@@ -54,21 +53,20 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             hargaLapangan = itemView.findViewById(R.id.hargaLap);
             gambarLapangan = itemView.findViewById(R.id.gambarLap);
 
-
-
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
                     String name = namaLapangan.getText().toString();
                     String alamat = alamatLapangan.getText().toString();
                     String harga = hargaLapangan.getText().toString();
-                    String gambar = gambarLapangan.getDrawable().toString();
+                    String gambar = list.get(getAdapterPosition()).getGambar();
 
                     Intent i = new Intent(itemView.getContext(), MainActivity6a.class);
                     i.putExtra("nama_lapangan", name);
                     i.putExtra("alamat_lapangan", alamat);
                     i.putExtra("harga_lapangan", harga);
-                    i.putExtra("gambar_lapangan", gambar);
+
                     itemView.getContext().startActivity(i);
                 }
             });

@@ -31,11 +31,12 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         mAuth = FirebaseAuth.getInstance();
-        editTextEmail = findViewById(R.id.editTextTextEmailAddress2);
-        editTextPassword = findViewById(R.id.editTextTextPassword2);
-        button = findViewById(R.id.btn_login);
-        progressBar = findViewById(R.id.progressBar);
-        textView = findViewById(R.id.daftarNow);
+        editTextEmail = findViewById(R.id.email);
+        editTextPassword = findViewById(R.id.password);
+        button = findViewById(R.id.button);
+        progressBar = findViewById(R.id.proBarlogin);
+        textView = findViewById(R.id.buttonregis);
+        progressBar.setVisibility(View.GONE);
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override

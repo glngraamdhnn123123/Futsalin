@@ -23,7 +23,6 @@ public class Users {
     public String getName() {
         return name;
     }
-
     public String getAlamat() {
         return alamat;
     }

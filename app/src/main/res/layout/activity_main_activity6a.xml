@@ -1,100 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EDF4FF"
     android:padding="16dp">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edittext_tanggal"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="Pilih tanggal dan waktu"
+        app:endIconCheckable="false"
+        app:endIconDrawable="@drawable/baseline_date_range_24"
+        app:endIconMode="custom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_start_time">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tanggal_pesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:forceHasOverlappingRendering="false"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
     <TextView
-        android:id="@+id/text_field_name"
+        android:id="@+id/alamatLap_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="18dp"
-        android:text="Maesa Garkindo"
-        android:textSize="25sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_italic"
+        android:hint="Alamat Lapangan"
+        android:padding="0dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:textColor="#000000"
+        android:textColorHint="@color/black"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namaLap_detail" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#777777"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hargaLap" />
+
+    <TextView
+        android:id="@+id/hargaLap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:hint="Harga"
+        android:padding="0dp"
+        android:paddingStart="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="0dp"
+        android:textColor="#000000"
+        android:textColorHint="@color/black"
+        android:textSize="14sp"
         android:textStyle="bold"
-        android:textColor="#2FC3FF"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alamatLap_detail" />
 
     <TextView
-        android:id="@+id/text_date"
+        android:id="@+id/namaLap_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/text_field_name"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="55dp"
-        android:text="Pilih Tanggal"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
-
-    <DatePicker
-        android:id="@+id/datePicker"
-        android:layout_width="395dp"
-        android:layout_height="137dp"
-        android:layout_below="@id/text_date"
-        android:layout_centerHorizontal="true"
-        android:calendarViewShown="false"
-        android:datePickerMode="spinner" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:hint="Nama Lapangan"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gambarLap" />
 
     <TextView
         android:id="@+id/text_start_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/datePicker"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:text="Pilih Jam Mulai"
-        android:textSize="16sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins"
+        android:text="Pilih Tanggal"
         android:textColor="@color/black"
-        android:textStyle="bold" />
-
-    <Spinner
-        android:id="@+id/spinner_start_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_start_time"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:entries="@array/start_time_options" />
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <TextView
         android:id="@+id/text_duration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/spinner_start_time"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
         android:text="Pilih Durasi"
         android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup_duration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_duration"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="3dp"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/radio_1_hour"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="1 Jam"
-            android:textSize="16sp" />
-
-        <RadioButton
-            android:id="@+id/radio_2_hours"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2 Jam"
-            android:textSize="16sp" />
-
-    </RadioGroup>
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_tanggal" />
 
 
     <TextView
@@ -102,37 +132,70 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="620dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_semibold"
         android:text="Total Harga: Rp. 0"
         android:textColor="#2FC3FF"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rb_jam" />
 
     <Button
         android:id="@+id/button_order"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="715dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_button"
         android:backgroundTint="#2FC3FF"
         android:text="Lanjutkan"
         android:textColor="#EDF4FF"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/button_back"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/gambarLap"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_grid"
+        android:outlineAmbientShadowColor="@color/black"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedimage" />
+
+    <RadioGroup
+        android:id="@+id/rb_jam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Kembali"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:backgroundTint="#2FC3FF"
-        android:textColor="#EDF4FF"
-        android:layout_below="@+id/button_order"/>
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_duration">
 
-</RelativeLayout>
+        <RadioButton
+            android:id="@+id/rb_1"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:text="1 Jam" />
+
+        <RadioButton
+            android:id="@+id/rb_2"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:text="2 Jam" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

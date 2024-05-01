@@ -1,8 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Futsalin" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/biru</item>
+        <item name="colorPrimaryVariant">@color/biru</item>
+        <item name="colorSecondary">@color/putih</item>
+        <item name="colorSecondaryVariant">#25496C</item>
     </style>
     <style name="RadioButtonStyle" parent="Theme.Material3.DayNight">
         <item name="colorAccent">@android:color/holo_red_light</item>
@@ -10,4 +12,9 @@
         <item name="colorPrimary">@color/blue</item>
     </style>
         <style name="Theme.Futsalin" parent="Base.Theme.Futsalin" />
+    <style name="roundedimage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">18dp</item>
+        <item name="color">#6B729A</item>
+    </style>
 </resources>

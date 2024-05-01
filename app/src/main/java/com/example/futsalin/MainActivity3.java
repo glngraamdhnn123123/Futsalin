@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity3 extends AppCompatActivity {
-    EditText editTextEmail, editTextPassword;
+    EditText editTextEmail, editTextPassword, editTextName, editTextNoHP;
     Button button;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
@@ -29,11 +29,14 @@ public class MainActivity3 extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
 
         mAuth = FirebaseAuth.getInstance();
-        editTextEmail = findViewById(R.id.editTextTextEmailAddress1);
-        editTextPassword = findViewById(R.id.editTextTextPassword1);
-        button = findViewById(R.id.btn_daftar);
-        progressBar = findViewById(R.id.progressBar);
-        textView = findViewById(R.id.masukNow);
+        editTextName = findViewById(R.id.namaregis);
+        editTextEmail = findViewById(R.id.emailregis);
+        editTextNoHP = findViewById(R.id.nohpregis);
+        editTextPassword = findViewById(R.id.passwordregis);
+        button = findViewById(R.id.buttonregis);
+        progressBar = findViewById(R.id.probarregis);
+        textView = findViewById(R.id.buttonRegis);
+        progressBar.setVisibility(View.GONE);
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override

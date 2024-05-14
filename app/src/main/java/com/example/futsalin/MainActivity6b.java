@@ -63,7 +63,7 @@ public class MainActivity6b extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent button1 = new Intent(getApplicationContext(), MainActivity5.class);
+                Intent button1 = new Intent(getApplicationContext(), HalamanLapangan.class);
                 startActivity(button1);
             }
         });
@@ -71,7 +71,7 @@ public class MainActivity6b extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent button2 = new Intent(getApplicationContext(), MainActivity7.class);
+                Intent button2 = new Intent(getApplicationContext(), HalamanPembayaran.class);
                 startActivity(button2);
             }
         });

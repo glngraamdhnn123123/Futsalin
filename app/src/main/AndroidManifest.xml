@@ -14,12 +14,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Futsalin"
         tools:targetApi="31">
-
+        <activity
+            android:name=".RiwayatPesanan"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPesanan"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_Detail_Pesanan"
+            android:exported="false" />
         <activity
             android:name=".CityDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity5"
+            android:name=".HalamanLapangan"
             android:exported="false" />
         <activity
             android:name=".MainActivity6c"
@@ -28,27 +36,27 @@
             android:name=".MainActivity6b"
             android:exported="false" />
         <activity
-            android:name=".MainActivity6a"
+            android:name=".HalamanTanggal"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".HalamanAwal"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".HalamanLogin"
             android:exported="false"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".HalamanRegister"
             android:exported="false"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
         <activity
-            android:name=".MainActivity4"
+            android:name=".HalamanBerhasilRegis"
             android:exported="false" />
         <activity
-            android:name=".MainActivity7"
+            android:name=".HalamanPembayaran"
             android:exported="false" />
         <activity
-            android:name=".MainActivity8"
+            android:name=".HalamanAkhir"
             android:exported="false" />
         <activity
             android:name=".SplashScreen"

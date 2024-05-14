@@ -19,7 +19,7 @@
         android:layout_marginTop="300dp"
         android:layout_marginEnd="125dp"
         android:layout_marginBottom="297dp"
-        app:srcCompat="@drawable/img1" />
+        app:srcCompat="@drawable/logobaru" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -33,5 +33,5 @@
         android:layout_marginTop="346dp"
         android:layout_marginEnd="46dp"
         android:layout_marginBottom="-72dp"
-        app:srcCompat="@drawable/meta" />
+        app:srcCompat="@drawable/metabaru" />
 </RelativeLayout>

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:hint="Pilih tanggal dan waktu"
+        android:hint="Pilih tanggal"
         app:endIconCheckable="false"
         app:endIconDrawable="@drawable/baseline_date_range_24"
         app:endIconMode="custom"
@@ -23,6 +23,29 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tanggal_pesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:forceHasOverlappingRendering="false"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edittext_waktu"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="Pilih waktu"
+        app:endIconCheckable="false"
+        app:endIconDrawable="@drawable/baseline_access_time_24"
+        app:endIconMode="custom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittext_tanggal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/waktu_pesan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
@@ -104,7 +127,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins"
-        android:text="Pilih Tanggal"
+        android:text="Pilih Tanggal dan Waktu"
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -124,7 +147,7 @@
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittext_tanggal" />
+        app:layout_constraintTop_toBottomOf="@+id/edittext_waktu" />
 
 
     <TextView
@@ -154,6 +177,7 @@
         android:textColor="#EDF4FF"
         android:textSize="16sp"
         android:textStyle="bold"
+        android:fontFamily="@font/poppins_bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

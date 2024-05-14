@@ -9,54 +9,40 @@
     android:layout_marginStart="20dp"
     android:layout_marginTop="8dp"
     android:layout_marginEnd="20dp"
-    android:id="@+id/grid_lapangan"
+    android:id="@+id/grid_artikel"
     android:elevation="10dp"
     android:background="@drawable/form_daftar">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="336dp"
+        android:layout_height="169dp"
         android:background="@drawable/bg_login">
 
         <TextView
             android:id="@+id/namaLap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="Nama Lapangan"
-            android:gravity="center"
+            android:layout_marginTop="21dp"
             android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:hint="Nama Lapangan"
             android:textColor="#000000"
             android:textColorHint="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.147"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/gambarLap"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/bg_grid"
-            android:outlineAmbientShadowColor="@color/black"
-            android:scaleType="centerCrop"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/namaLap"
-            app:shapeAppearanceOverlay="@style/roundedimage" />
-
         <TextView
-            android:id="@+id/hargaLap"
+            android:id="@+id/jamPesanan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="32dp"
             android:fontFamily="@font/poppins_semibold"
-            android:hint="Harga"
+            android:hint="Jam"
             android:padding="0dp"
             android:paddingStart="0dp"
             android:paddingTop="0dp"
@@ -67,26 +53,66 @@
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/alamatLap" />
+            app:layout_constraintTop_toBottomOf="@+id/tanggalPesanan" />
 
         <TextView
-            android:id="@+id/alamatLap"
+            android:id="@+id/tanggalPesanan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/poppins_italic"
-            android:hint="Alamat Lapangan"
+            android:fontFamily="@font/poppins_semibold"
+            android:hint="Tanggal"
             android:padding="0dp"
             android:paddingTop="0dp"
             android:paddingBottom="0dp"
             android:textColor="#000000"
             android:textColorHint="@color/black"
             android:textSize="14sp"
-            android:textStyle="italic"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gambarLap" />
+            tools:layout_editor_absoluteY="52dp" />
+
+        <TextView
+            android:id="@+id/durasiPesanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:hint="Durasi"
+            android:padding="0dp"
+            android:paddingStart="0dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="0dp"
+            android:textColor="#000000"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jamPesanan" />
+
+        <TextView
+            android:id="@+id/totalPesanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:hint="Total"
+            android:padding="0dp"
+            android:paddingStart="0dp"
+            android:paddingTop="0dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="0dp"
+            android:textColor="#000000"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/durasiPesanan" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

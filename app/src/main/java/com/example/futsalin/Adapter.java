@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
-import com.google.firebase.database.IgnoreExtraProperties;
 
 import java.util.ArrayList;
 
@@ -44,7 +43,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView namaLapangan, alamatLapangan, hargaLapangan, gambarlapangan;
+        TextView namaLapangan, alamatLapangan, hargaLapangan;
         ImageView gambarLapangan;
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
@@ -60,12 +59,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
                     String name = namaLapangan.getText().toString();
                     String alamat = alamatLapangan.getText().toString();
                     String harga = hargaLapangan.getText().toString();
-                    String gambar = list.get(getAdapterPosition()).getGambar();
+                    String gambar = gambarLapangan.getDrawable().toString();
 
-                    Intent i = new Intent(itemView.getContext(), MainActivity6a.class);
+                    Intent i = new Intent(itemView.getContext(), HalamanTanggal.class);
                     i.putExtra("nama_lapangan", name);
                     i.putExtra("alamat_lapangan", alamat);
                     i.putExtra("harga_lapangan", harga);
+                    i.putExtra("gambar_lapangan", gambar);
 
                     itemView.getContext().startActivity(i);
                 }

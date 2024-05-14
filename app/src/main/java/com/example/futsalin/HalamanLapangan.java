@@ -7,8 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.*;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -18,7 +16,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class MainActivity5 extends AppCompatActivity {
+public class HalamanLapangan extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<Users> list;
     DatabaseReference databaseReference;
@@ -27,14 +25,14 @@ public class MainActivity5 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(MainActivity5.this, MainActivity.class));
+        startActivity(new Intent(HalamanLapangan.this, HalamanAwal.class));
         finish();
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main5);
+        setContentView(R.layout.activity_lapangan);
         recyclerView = findViewById(R.id.recyclerview);
         databaseReference = FirebaseDatabase.getInstance().getReference("lapangan");
         list = new ArrayList<>();

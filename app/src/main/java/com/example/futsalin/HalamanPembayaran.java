@@ -7,20 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 
-public class MainActivity4 extends AppCompatActivity {
-    Button button66;
+public class HalamanPembayaran extends AppCompatActivity {
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
+        setContentView(R.layout.activity_pembayaran);
 
-        button66 = (Button) findViewById(R.id.button66);
+        button = findViewById(R.id.button_selesai);
 
-        button66.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent button1 = new Intent(getApplicationContext(), MainActivity2.class);
+                Intent button1 = new Intent(getApplicationContext(), HalamanAkhir.class);
                 startActivity(button1);
             }
         });

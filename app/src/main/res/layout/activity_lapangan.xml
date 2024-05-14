@@ -5,7 +5,7 @@
     android:background="#EDF4FF"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity5">
+    tools:context=".HalamanLapangan">
 
     <TextView
         android:id="@+id/text"

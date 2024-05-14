@@ -11,12 +11,10 @@ import android.widget.*;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity3 extends AppCompatActivity {
+public class HalamanRegister extends AppCompatActivity {
     EditText editTextEmail, editTextPassword, editTextName, editTextNoHP;
     Button button;
     FirebaseAuth mAuth;
@@ -26,7 +24,7 @@ public class MainActivity3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_register);
 
         mAuth = FirebaseAuth.getInstance();
         editTextName = findViewById(R.id.namaregis);
@@ -41,7 +39,7 @@ public class MainActivity3 extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+               Intent i = new Intent(getApplicationContext(), HalamanLogin.class);
                startActivity(i);
                finish();
             }
@@ -56,12 +54,12 @@ public class MainActivity3 extends AppCompatActivity {
                 password = String.valueOf(editTextPassword.getText());
 
                 if (TextUtils.isEmpty(email)){
-                    Toast.makeText(MainActivity3.this, "Masukkan email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HalamanRegister.this, "Masukkan email", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 if (TextUtils.isEmpty(password)){
-                    Toast.makeText(MainActivity3.this, "Masukkan password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HalamanRegister.this, "Masukkan password", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -71,13 +69,13 @@ public class MainActivity3 extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(MainActivity3.this, "Akun berhasil dibuat.",
+                                    Toast.makeText(HalamanRegister.this, "Akun berhasil dibuat.",
                                             Toast.LENGTH_SHORT).show();
-                                    Intent i = new Intent(getApplicationContext(), MainActivity4.class);
+                                    Intent i = new Intent(getApplicationContext(), HalamanBerhasilRegis.class);
                                     startActivity(i);
                                     finish();
                                 } else {
-                                    Toast.makeText(MainActivity3.this, "Authentikasi gagal.",
+                                    Toast.makeText(HalamanRegister.this, "Authentikasi gagal.",
                                             Toast.LENGTH_SHORT).show();
 
                                 }

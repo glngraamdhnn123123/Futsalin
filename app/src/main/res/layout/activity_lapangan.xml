@@ -7,6 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".HalamanLapangan">
 
+    <ProgressBar
+        android:id="@+id/probarlapangan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerview"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerview"
+        app:layout_constraintStart_toStartOf="@+id/recyclerview"
+        app:layout_constraintTop_toTopOf="@+id/text"
+        android:elevation="20dp"/>
+
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"

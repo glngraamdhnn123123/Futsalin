@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,6 +23,7 @@ public class HalamanLapangan extends AppCompatActivity {
     ArrayList<Users> list;
     DatabaseReference databaseReference;
     Adapter adapter;
+    ProgressBar progressBar;
 
     @Override
     public void onBackPressed() {
@@ -39,9 +42,12 @@ public class HalamanLapangan extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new Adapter(this, list);
         recyclerView.setAdapter(adapter);
+        progressBar = findViewById(R.id.probarlapangan);
+        progressBar.setVisibility(View.GONE);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                progressBar.setVisibility(View.VISIBLE);
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
                     Users users = dataSnapshot.getValue(Users.class);
                     list.add(users);

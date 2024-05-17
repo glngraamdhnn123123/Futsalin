@@ -8,32 +8,20 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/gilangsvg"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Futsalin"
         tools:targetApi="31">
         <activity
-            android:name=".RiwayatPesanan"
+            android:name=".HalamanRiwayat"
             android:exported="false" />
         <activity
             android:name=".DetailPesanan"
             android:exported="false" />
         <activity
-            android:name=".Activity_Detail_Pesanan"
-            android:exported="false" />
-        <activity
-            android:name=".CityDetailActivity"
-            android:exported="false" />
-        <activity
             android:name=".HalamanLapangan"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity6c"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity6b"
             android:exported="false" />
         <activity
             android:name=".HalamanTanggal"

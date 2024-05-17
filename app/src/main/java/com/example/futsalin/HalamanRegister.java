@@ -49,12 +49,24 @@ public class HalamanRegister extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 progressBar.setVisibility(View.VISIBLE);
-                String email, password;
+                String nama, email, nohp, password;
+                nama = String.valueOf(editTextName.getText());
                 email = String.valueOf(editTextEmail.getText());
+                nohp = String.valueOf(editTextNoHP.getText());
                 password = String.valueOf(editTextPassword.getText());
+
+                if (TextUtils.isEmpty(nama)){
+                    Toast.makeText(HalamanRegister.this, "Masukkan nama", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 if (TextUtils.isEmpty(email)){
                     Toast.makeText(HalamanRegister.this, "Masukkan email", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(nohp)){
+                    Toast.makeText(HalamanRegister.this, "Masukkan no. handpone", Toast.LENGTH_SHORT).show();
                     return;
                 }
 

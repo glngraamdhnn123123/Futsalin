@@ -43,21 +43,22 @@ public class HalamanLapangan extends AppCompatActivity {
         adapter = new Adapter(this, list);
         recyclerView.setAdapter(adapter);
         progressBar = findViewById(R.id.probarlapangan);
-        progressBar.setVisibility(View.GONE);
+        progressBar.setVisibility(View.VISIBLE);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                progressBar.setVisibility(View.VISIBLE);
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
                     Users users = dataSnapshot.getValue(Users.class);
                     list.add(users);
                 }
                 adapter.notifyDataSetChanged();
+
+                progressBar.setVisibility(View.GONE);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                progressBar.setVisibility(View.GONE);
             }
         });
 

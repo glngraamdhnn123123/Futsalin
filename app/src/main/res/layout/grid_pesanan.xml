@@ -9,20 +9,20 @@
     android:layout_marginStart="20dp"
     android:layout_marginTop="8dp"
     android:layout_marginEnd="20dp"
-    android:id="@+id/grid_artikel"
+    android:id="@+id/gridPesanan"
     android:elevation="10dp"
     android:background="@drawable/form_daftar">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="169dp"
+        android:layout_height="151dp"
         android:background="@drawable/bg_login">
 
         <TextView
             android:id="@+id/namaLap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="21dp"
+            android:layout_marginTop="12dp"
             android:fontFamily="@font/poppins_bold"
             android:gravity="center"
             android:hint="Nama Lapangan"
@@ -71,7 +71,7 @@
             android:textColorHint="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="52dp" />
+            tools:layout_editor_absoluteY="43dp" />
 
         <TextView
             android:id="@+id/durasiPesanan"

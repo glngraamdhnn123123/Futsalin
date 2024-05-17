@@ -26,7 +26,7 @@ public class AdapterPesanan extends RecyclerView.Adapter<MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_pesanan, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -41,7 +41,7 @@ public class AdapterPesanan extends RecyclerView.Adapter<MyViewHolder> {
         holder.cardPesanan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, DetailPesanan.class);
+                Intent intent = new Intent(context, HalamanRiwayat.class);
                 intent.putExtra("Nama Lapangan", dataList.get(holder.getAdapterPosition()).getName());
                 intent.putExtra("Tanggal", dataList.get(holder.getAdapterPosition()).getTanggal());
                 intent.putExtra("Waktu", dataList.get(holder.getAdapterPosition()).getWaktu());
@@ -55,6 +55,7 @@ public class AdapterPesanan extends RecyclerView.Adapter<MyViewHolder> {
 
     @Override
     public int getItemCount() {
+
         return dataList.size();
     }
 }
@@ -66,12 +67,12 @@ class MyViewHolder extends RecyclerView.ViewHolder {
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
 
-        lapPesanan = itemView.findViewById(R.id.lapPesanan);
+        lapPesanan = itemView.findViewById(R.id.namaLap);
         tanggalPesanan = itemView.findViewById(R.id.tanggalPesanan);
-        waktuPesanan = itemView.findViewById(R.id.waktuPesanan);
+        waktuPesanan = itemView.findViewById(R.id.jamPesanan);
         durasiPesanan = itemView.findViewById(R.id.durasiPesanan);
         totalPesanan = itemView.findViewById(R.id.totalPesanan);
-        cardPesanan = itemView.findViewById(R.id.cardPesanan);
+        cardPesanan = itemView.findViewById(R.id.gridPesanan);
 
     }
 

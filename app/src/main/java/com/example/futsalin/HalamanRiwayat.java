@@ -1,15 +1,10 @@
  package com.example.futsalin;
 
 import android.os.Bundle;
-import android.view.Gravity;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -22,7 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
- public class RiwayatPesanan extends AppCompatActivity {
+ public class HalamanRiwayat extends AppCompatActivity {
 
     RecyclerView recyclerView;
     List<UserDate> dataList;
@@ -36,21 +31,18 @@ import java.util.List;
 
         recyclerView = findViewById(R.id.recyclerView);
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(RiwayatPesanan.this, 1);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(HalamanRiwayat.this, 1);
         recyclerView.setLayoutManager(gridLayoutManager);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(RiwayatPesanan.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(HalamanRiwayat.this);
         builder.setCancelable(false);
         builder.setView(R.layout.progres_layout_pesanan);
         AlertDialog dialog = builder.create();
         dialog.show();
 
-        for (UserDate userDate : dataList) {
-            
-        }
-        new ArrayList<>();
+        dataList = new ArrayList<>();
 
-        AdapterPesanan adapterPesanan = new AdapterPesanan(RiwayatPesanan.this, dataList);
+        AdapterPesanan adapterPesanan = new AdapterPesanan(HalamanRiwayat.this, dataList);
         recyclerView.setAdapter(adapterPesanan);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Riwayat Pemesanan");

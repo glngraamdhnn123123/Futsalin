@@ -15,11 +15,12 @@ public class HalamanPembayaran extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pembayaran);
 
-        button = findViewById(R.id.button_selesai);
+        button = findViewById(R.id.buttonBayar);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(HalamanPembayaran.this, "Pembayaran berhasil, selamat bermain.", Toast.LENGTH_SHORT).show();
                 Intent button1 = new Intent(getApplicationContext(), HalamanAkhir.class);
                 startActivity(button1);
             }

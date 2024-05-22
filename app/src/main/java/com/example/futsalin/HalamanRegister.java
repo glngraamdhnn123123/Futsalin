@@ -66,7 +66,7 @@ public class HalamanRegister extends AppCompatActivity {
                 }
 
                 if (TextUtils.isEmpty(nohp)){
-                    Toast.makeText(HalamanRegister.this, "Masukkan no. handpone", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HalamanRegister.this, "Masukkan no. handphone", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -81,13 +81,13 @@ public class HalamanRegister extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(HalamanRegister.this, "Akun berhasil dibuat.",
+                                    Toast.makeText(HalamanRegister.this, "Akun berhasil dibuat, silahkan masuk.",
                                             Toast.LENGTH_SHORT).show();
                                     Intent i = new Intent(getApplicationContext(), HalamanBerhasilRegis.class);
                                     startActivity(i);
                                     finish();
                                 } else {
-                                    Toast.makeText(HalamanRegister.this, "Authentikasi gagal.",
+                                    Toast.makeText(HalamanRegister.this, "Autentikasi gagal.",
                                             Toast.LENGTH_SHORT).show();
 
                                 }

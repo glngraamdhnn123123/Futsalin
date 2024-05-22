@@ -1,5 +1,6 @@
  package com.example.futsalin;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -24,6 +25,13 @@ import java.util.List;
     DatabaseReference databaseReference;
     ValueEventListener eventListener;
 
+     @Override
+     public void onBackPressed() {
+         super.onBackPressed();
+         startActivity(new Intent(HalamanRiwayat.this, HalamanAkhir.class));
+         finish();
+     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +53,7 @@ import java.util.List;
         AdapterPesanan adapterPesanan = new AdapterPesanan(HalamanRiwayat.this, dataList);
         recyclerView.setAdapter(adapterPesanan);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("Riwayat Pemesanan");
+        databaseReference = FirebaseDatabase.getInstance().getReference("order");
         dialog.show();
 
         eventListener = databaseReference.addValueEventListener(new ValueEventListener() {

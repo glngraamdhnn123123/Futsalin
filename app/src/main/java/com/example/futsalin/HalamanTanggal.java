@@ -113,7 +113,6 @@ public class HalamanTanggal extends AppCompatActivity {
             }
             total.setText("Total Harga: Rp. " + totalPrice);
         }
-
         tanggal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -200,7 +199,6 @@ public class HalamanTanggal extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(HalamanTanggal.this, "Sukses", Toast.LENGTH_SHORT).show();
                             Intent i = new Intent(getApplicationContext(), HalamanPembayaran.class);
                             startActivity(i);
                             finish();

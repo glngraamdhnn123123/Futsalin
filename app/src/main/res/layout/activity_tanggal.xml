@@ -167,17 +167,16 @@
 
     <Button
         android:id="@+id/button_order"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="337dp"
+        android:layout_height="49dp"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="8dp"
         android:background="@drawable/bg_button"
         android:backgroundTint="#2FC3FF"
+        android:fontFamily="@font/poppins_bold"
         android:text="Lanjutkan"
         android:textColor="#EDF4FF"
         android:textSize="16sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/poppins_bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
